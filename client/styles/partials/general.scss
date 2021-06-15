@@ -1,0 +1,147 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: none;
+    transition: opacity 0.2s ease-in-out;
+    border: 0;
+
+}
+
+
+//colors
+.white-text{
+    color: white;
+}
+.super-bright-blue{
+    color: #838F97;
+}
+.bright-blue{
+    color: #86B6CF;
+}
+
+//bg
+
+.super-bright-blue-bg{
+    background-color: #838f9793;
+}
+
+//elements
+input{ 
+    height: 50px;
+    width: 130px; 
+    margin: 5px;  
+    padding: 3px 6px 0 0;  
+    font-size: 20px;
+    color: #1D1D48;      
+}
+.search-field{
+    background-color: #a6acafc4;
+    background-image: url('https://image.flaticon.com/icons/png/512/751/751463.png');
+    background-position: 90% 50%;
+    background-size: 20%;
+    background-repeat: no-repeat;
+    border: none;
+    &:hover{
+        background-color: #86B6CF;
+        width: 180px; 
+        background-position: 10% 50%;
+        transition: 0.2s;
+        &::placeholder{
+            opacity: 0;
+        }
+    }
+    &:not(:hover){
+        background-color: #a6acaf96;
+        width: 130px; 
+        background-position: 90% 50%;
+        transition: 0.2s;
+    }
+    &::placeholder{
+        transform: translateX(-40px);
+        font-size: 20px;
+        color: #CBE8FC;
+    }
+}
+
+.pink-button{
+    height: 50px;
+    width: 180px;
+    background-color: #f25;
+    color: white;
+    font-size: 20px;
+    margin: 5;
+    &:hover{
+        background-color: #e62250;
+    }
+}
+
+//icons
+.icon{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cinema-logo{
+    background-image: url('https://www.cinema-city.co.il/img/logo.png');
+    width: 150px;
+    min-width:100px;
+    height: 100px;
+}
+.facebook-logo{
+    background-image: url('https://image.flaticon.com/icons/png/512/2504/2504903.png');
+}
+.instegram-logo{
+    background-image: url('https://image.flaticon.com/icons/png/512/2111/2111336.png');    
+}
+.social-icon{
+    width: 35px;
+    height: 35px;
+    margin: 6px;
+}
+
+
+//flip-card
+.card {
+  width: 234px;
+  height: 338px;
+  perspective: 2000px;
+  margin: 10px 5px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  color: #03446A;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+
+}
+
+.back {
+  background: #CAE8FB;
+  color: white;
+  transform: rotateY( 180deg );
+}
