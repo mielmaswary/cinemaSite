@@ -17,7 +17,7 @@
                </head>
                <body>';
           
-     $sql="SELECT * FROM halls WHERE ticketsAvailable>0;";
+     $sql="SELECT * FROM movies;";
      $result=mysqli_query($connection,$sql);
    
      echo '
@@ -40,15 +40,15 @@
              </ul>
          </div>';
      echo '<div class="movies-list-container">';
-     while ($hall=mysqli_fetch_array($result)) {
-        $movieName=$hall['movieName'];
-        $sql2="SELECT * FROM movies WHERE movieName='$movieName';";
-        $result2=mysqli_query($connection,$sql2);
-        $movie=mysqli_fetch_array($result2);
-        $movieDescription=$movie['movieDescription'];
-        $movieLength=$movie['movieLength'];
-        $movieImgUrl=$movie['movieImgUrl'];
-        $ticketsAvailable=($hall['ticketsAvailable']>0?$hall['ticketsAvailable']:'אין מקומות פנויים');
+     while ($movies=mysqli_fetch_array($result)) {
+        $movieName=$movies['movieName'];
+        // $sql2="SELECT * FROM movies WHERE movieName='$movieName';";
+        // $result2=mysqli_query($connection,$sql2);
+        // $movie=mysqli_fetch_array($result2);
+        $movieDescription=$movies['movieDescription'];
+        $movieLength=$movies['movieLength'];
+        $movieImgUrl=$movies['movieImgUrl'];
+        // $ticketsAvailable=($hall['ticketsAvailable']>0?$hall['ticketsAvailable']:'אין מקומות פנויים');
      
         echo '<div class="card icon">';
            echo '
@@ -58,7 +58,7 @@
                        <div class="back">';
                                echo 'שם הסרט: '.$movieName.'</br>';
                                echo 'תיאור: '.$movieDescription.'</br>';
-                               echo 'מקומות פנויים: '.$ticketsAvailable.'</br>';
+                            //    echo 'מקומות פנויים: '.$ticketsAvailable.'</br>';
                       echo '</div>
                   </div>';
       echo '</div>';
