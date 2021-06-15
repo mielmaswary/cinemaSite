@@ -8,7 +8,7 @@
         $newMovieDescription=$_GET['newMovieDescription'];
         $newMovieLength=$_GET['newMovieLength'];
         $newMovieImg=$_GET['newMovieImgToUpload'];
-
+        
         $sql="INSERT INTO movies (movieName, movieDescription, movieLength, movieImgUrl)
               VALUES('$newMovieName','$newMovieDescription',$newMovieLength,'$newMovieImg');";
         if(mysqli_query($connection,$sql))
