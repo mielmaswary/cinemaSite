@@ -37,6 +37,20 @@ input {
   color: #1D1D48;
 }
 
+select, option {
+  height: 50px;
+  width: 180px;
+  margin: 8px;
+  padding: 3px;
+  color: #141433;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+option {
+  font-size: 12px;
+}
+
 .search-field {
   background-color: #a6acafc4;
   background-image: url("https://image.flaticon.com/icons/png/512/751/751463.png");
@@ -46,7 +60,7 @@ input {
   border: none;
 }
 
-.search-field:hover {
+.search-field:focus {
   background-color: #86B6CF;
   width: 180px;
   background-position: 10% 50%;
@@ -54,23 +68,23 @@ input {
   transition: 0.2s;
 }
 
-.search-field:hover::-webkit-input-placeholder {
+.search-field:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.search-field:hover:-ms-input-placeholder {
+.search-field:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
-.search-field:hover::-ms-input-placeholder {
+.search-field:focus::-ms-input-placeholder {
   opacity: 0;
 }
 
-.search-field:hover::placeholder {
+.search-field:focus::placeholder {
   opacity: 0;
 }
 
-.search-field:not(:hover) {
+.search-field:not(:focus) {
   background-color: #a6acaf96;
   width: 130px;
   background-position: 90% 50%;
@@ -104,17 +118,68 @@ input {
   color: #CBE8FC;
 }
 
-.pink-button {
+.pink-button, .blue-button, .purchase-button, .pre-purchase-button {
   height: 50px;
   width: 180px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
   background-color: #f25;
   color: white;
   font-size: 20px;
-  margin: 5;
+  margin: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.pink-button:hover {
+.pink-button:hover, .blue-button:hover, .purchase-button:hover, .pre-purchase-button:hover {
   background-color: #e62250;
+}
+
+.blue-button {
+  background-color: #1D1D48;
+  -webkit-transform: translate(-50%, -110%);
+          transform: translate(-50%, -110%);
+}
+
+.blue-button:hover {
+  background-color: #141433;
+}
+
+.purchase-button, .pre-purchase-button {
+  background-color: #20ca3c;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  width: 100%;
+}
+
+.purchase-button:hover, .pre-purchase-button:hover {
+  background-color: #1bb134;
+}
+
+.pre-purchase-button {
+  -webkit-transform: translate(-52%, 100%);
+          transform: translate(-52%, 100%);
+}
+
+.admin-edit-form-button {
+  background-color: #20ca3c;
+  width: 100%;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.admin-edit-form-button:hover {
+  background-color: #1bb134;
 }
 
 .icon {
@@ -128,6 +193,20 @@ input {
   width: 150px;
   min-width: 100px;
   height: 100px;
+}
+
+@media (max-width: 768.99px) {
+  .cinema-logo {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 481.99px) {
+  .cinema-logo {
+    width: 90px;
+    height: 60px;
+  }
 }
 
 .facebook-logo {
@@ -150,6 +229,7 @@ input {
   -webkit-perspective: 2000px;
           perspective: 2000px;
   margin: 10px 5px;
+  position: relative;
 }
 
 .content {
@@ -189,8 +269,51 @@ input {
 
 .back {
   background: #CAE8FB;
-  color: white;
+  color: #050505;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.back * {
+  text-align: right;
+}
+
+.ticketsOrderCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f25;
+  color: #CAE8FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
+.display-none {
+  display: none;
 }
 /*# sourceMappingURL=general.css.map */

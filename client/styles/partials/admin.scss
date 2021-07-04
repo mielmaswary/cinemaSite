@@ -1,0 +1,23 @@
+
+.admin-edit-panel-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-wrap: wrap;
+    background-color: #1D1D48;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    color: white;
+  
+}
+.admin-panel-form{
+    width: 60%;
+}
+
+.admin-edit-input{
+  width: 100%;
+  margin: 5px 0;
+  padding: 12px;
+}

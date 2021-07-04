@@ -1,0 +1,32 @@
+.admin-edit-panel-container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #1D1D48;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+.admin-panel-form {
+  width: 60%;
+}
+
+.admin-edit-input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 12px;
+}
+/*# sourceMappingURL=admin.css.map */

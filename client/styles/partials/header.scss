@@ -1,6 +1,10 @@
 .header{
     width: 100vw;
     height: 180px; 
+    @media (max-width:768.99px) {
+        height: 150px; 
+    }
+  
     .contact{
         width: 100%;
         height: 50px;
@@ -22,16 +26,33 @@
         width: 100%;
         height: 120px;
         background-color: #838F97;
+        .pink-button{
+            position: static;
+            transform: none;
+        }
         span{
             font-size:25px;
             color: #BDE8FC;
             padding: 7px;
             margin: 0 10px;
+            @media (max-width:768.99px) {
+                font-size: 18px; 
+                display: none;
+            }
+            @media (max-width:481.99px) {
+                font-size: 16px;
+
+            }
             &:hover{
                 background-color: #9CA5AC;
             }
+            a{
+                color: #BDE8FC;
+                text-decoration: none;
+            }
+
         }
-    
+       
     }   
 }
 

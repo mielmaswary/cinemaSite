@@ -1,46 +1,15 @@
 <?php
-
      require_once('./dataBseConnection.php');
      require_once('../utils/echoHtml.php');
      require_once('../scssphp/scss.inc.php');
-    
 
-
-     echo '<html>
-               <head>
-                     <meta charset="UTF-8">
-                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                     <link rel="stylesheet" href="../client/styles/style.scss">
-                     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-                     <title>סרטים</title>
-               </head>
-               <body>';
-          
+     echoHtmlBegin();
+     echoHeader();
+     echoMovieListContainerBegin();
      $sql="SELECT * FROM movies;";
      $result=mysqli_query($connection,$sql);
-   
-     echo '
-         <div class="header">
-             <div class="contact">
-                 <span class="bright-blue">03-0000000</span>
-                 <span class="bright-blue">sinema@sinema.com</span>
-                 <div class="icon facebook-logo social-icon"></div>
-                 <div class="icon instegram-logo social-icon"></div>
-             </div>
-             <ul class="navBar">
-                 <span>ילדים</span>
-                 <span>הופעות</span>
-                 <span>מתחמים</span>
-                 <span>VIP</span>
-                 <span>הנחיות קורונה</span>
-                 <div class="cinema-logo icon"></div>
-                 <input class="search-field" type="text" placeholder="חיפוש"></inupt>
-                 <button class="pink-button">הזמן כרטיסים</button>
-             </ul>
-         </div>';
-     echo '<div class="movies-list-container">';
      while ($movies=mysqli_fetch_array($result)) {
+         
         $movieName=$movies['movieName'];
         // $sql2="SELECT * FROM movies WHERE movieName='$movieName';";
         // $result2=mysqli_query($connection,$sql2);
@@ -56,18 +25,51 @@
                        <div class="front movie-img" style="background-image: url('.$movieImgUrl.')">
                        </div>
                        <div class="back">';
-                               echo 'שם הסרט: '.$movieName.'</br>';
-                               echo 'תיאור: '.$movieDescription.'</br>';
+                               echo "<h3>$movieName</h3></br>";
+                               echo "<h6>$movieDescription</h6></br>";
                             //    echo 'מקומות פנויים: '.$ticketsAvailable.'</br>';
+                               echo '<div class="blue-button"><span>מעבר לדף הסרט</span></div>';
+                               echo '<div class="pink-button ticketsOrderBtn"><span>להזמנת כרטיסים</span></div>';
                       echo '</div>
+                      <div  class="back ticketsOrderCard display-none">
+                          <h5>הזמנת כרטיסים לסרט</h5>';
+                          echo "<h4>$movieName</h4>";
+                          echo '<form id="selectHallForm"  action="./movieTicketsOrder.php">';
+                                     echo '<select name="cinemaName" onchange="fetch_select(this.value,'.$movieName.');">';
+                                          echo '<option selected disabled >בחר בית קולנוע</option>';
+                                          echo '<option value="glilot">גלילות</option>';
+                                          echo '<option value="kfr-saba">כפר סבא</option>';
+                                          echo '<option value="rashlats">ראשון לציון</option>';
+                                          echo '<option value="jerusalem">ירושלים</option>';
+                                          echo '<option value="beer-sheva">באר-שבע</option>';
+                                     echo"</select></br>";
+                                     echo '
+                                         <select id="new_select">
+                                         </select>
+                                      ';
+                                    // if(isset($_POST['get_option'])){
+                                    //       echo '<option selected disabled >בחר תאריך</option>';
+                                    //       $sql3="SELECT movieDateTime FROM halls WHERE movieName='$movieName' AND cinemaName='$cinemaName'";
+                                    //       $result3=mysqli_query($connection,$sql3);
+                                    //       while($movieDateTime=mysqli_fetch_array($result3)){
+                                    //             echo'<option class="selectOption" value="'.$movieDateTime.'">'.$movieDateTime.'</option>'; 
+                                    //       }
+                                    // }
+                                     echo'<input type="hidden" name="movieName" value="'.$movieName.'">
+                                     <input  type="submit" value="בצע הזמנה" class="blue-button">
+                               </form>
+                      </div>
+
                   </div>';
-      echo '</div>';
+        echoCloserDivTag();
      }
-     echo '</div>';
-     echo '</body>';
-     mysqli_close($connection);
+     echoHtmlEnd();
 ?>
 <script src="../client/js/movies.js"></script>
+
+<?php
+     mysqli_close($connection);
+?>
 
 
 

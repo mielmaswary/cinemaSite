@@ -1,0 +1,20 @@
+.movie-ticket-info {
+  height: 400px;
+  width: 650px;
+  background-position: center left;
+}
+
+.movie-ticket-info-form {
+  width: 50%;
+  margin-top: 15px;
+  position: relative;
+}
+
+.movie-ticket-info-form .purchase-button {
+  width: 50%;
+}
+
+.movie-ticket-info-form-input {
+  width: 100%;
+}
+/*# sourceMappingURL=movieTicketsOrder.css.map */
