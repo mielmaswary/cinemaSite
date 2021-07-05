@@ -4,15 +4,12 @@
      {
          echo "error!".mysqli_connect_error();
          echo "</br>";
-   
      }
-
      $sql='USE cinema';
      if(mysqli_query($connection,$sql))
      {
-        // //  echo "Using cinema. </br>";
-        //  echo "</br>";
- 
+        //  echo "Using cinema. </br>";
+         echo "</br>";
      }
      else
      {

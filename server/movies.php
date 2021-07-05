@@ -33,9 +33,9 @@
                       echo '</div>
                       <div  class="back ticketsOrderCard display-none">
                           <h5>הזמנת כרטיסים לסרט</h5>';
-                          echo "<h4>$movieName</h4>";
+                          echo "<h4 id=\"mName\">$movieName</h4>";
                           echo '<form id="selectHallForm"  action="./movieTicketsOrder.php">';
-                                     echo '<select name="cinemaName" onchange="fetch_select(this.value,'.$movieName.');">';
+                                     echo '<select  name="cinemaName" onchange="fetch_select(this.value,document.getElementById(\'mName\').innerHTML);">';
                                           echo '<option selected disabled >בחר בית קולנוע</option>';
                                           echo '<option value="glilot">גלילות</option>';
                                           echo '<option value="kfr-saba">כפר סבא</option>';
@@ -44,17 +44,10 @@
                                           echo '<option value="beer-sheva">באר-שבע</option>';
                                      echo"</select></br>";
                                      echo '
-                                         <select id="new_select">
+                                         <select name="movieDateTime" id="new_select">
                                          </select>
                                       ';
-                                    // if(isset($_POST['get_option'])){
-                                    //       echo '<option selected disabled >בחר תאריך</option>';
-                                    //       $sql3="SELECT movieDateTime FROM halls WHERE movieName='$movieName' AND cinemaName='$cinemaName'";
-                                    //       $result3=mysqli_query($connection,$sql3);
-                                    //       while($movieDateTime=mysqli_fetch_array($result3)){
-                                    //             echo'<option class="selectOption" value="'.$movieDateTime.'">'.$movieDateTime.'</option>'; 
-                                    //       }
-                                    // }
+                                 
                                      echo'<input type="hidden" name="movieName" value="'.$movieName.'">
                                      <input  type="submit" value="בצע הזמנה" class="blue-button">
                                </form>

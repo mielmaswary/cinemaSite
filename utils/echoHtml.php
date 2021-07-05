@@ -1,4 +1,5 @@
 <?php
+
      function echoHtmlBegin(){
           echo '<html>
                     <head>
@@ -48,22 +49,8 @@
      }
 
      function renderMovieDates(){
-      
-          if(isset($_POST['get_option'])){
-              $sql3="SELECT * FROM halls WHERE movieName='$movieName' AND cinemaName='$cinemaName'";
-              $result3=mysqli_query($connection,$sql3);
-                          
-              echo '<select name="movieDateTime">';
-              echo '<option selected disabled >בחר תאריך</option>';
-              echo '<option >בחר תאריך</option>';
-              echo '<option >בחר תאריך</option>';
-              echo '<option >בחר תאריך</option>';
-
-                    while($movieDateTimes=mysqli_fetch_array($result3)){
-                          $movieDateTime=$movieDateTimes['movieDateTime'];
-                          echo'<option class="selectOption" value="'.$movieDateTime.'">'.$movieDateTime.'</option>'; 
-                        }
-              echo' </select></br>';
-          }        
+         
+             
+             
      }
 ?>

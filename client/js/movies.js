@@ -73,11 +73,10 @@ function fetch_select(val,movieName)
            type: 'post',
            url: 'http://localhost/firstphp/cinemaSite/utils/renderDates.php',
            data: {
-              get_option:val,
+              cityName:val,
               movieName:movieName
            },
            success: function (response) {
-              alert(response);
               document.getElementById("new_select").innerHTML=response; 
            },
            error: function (xhr, ajaxOptions, thrownError) {
