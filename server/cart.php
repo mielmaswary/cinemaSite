@@ -66,7 +66,7 @@
            global $hallNumber,$movieName,$ticketsPurchasedQuantity,$totalAvailableTickets,$awnerName,$awnerLastName,$awnerEmail;
            updateHallAvailableTickets($hallNumber,$movieName,$ticketsPurchasedQuantity,$totalAvailableTickets);
            updatePurchasedTickets($hallNumber,$movieName,$awnerName,$awnerLastName,$awnerEmail,$ticketsPurchasedQuantity);
-        //    mail("miel1983@gmail.com","check","Is it work???");
+           mail($awnerEmail,"check","Is it work???");
        }
        mysqli_close($connection);
 
