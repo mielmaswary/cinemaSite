@@ -51,13 +51,13 @@ for(let i=0;i<ticketsOrderCards.length;i++){
       })
 }
 
-selectHallForm.firstChild.addEventListener('change',()=>{
-   document.cookie = "cinemaName"+"="+selectHallForm.firstChild.value;
-})
+// selectHallForm.firstChild.addEventListener('change',()=>{
+//    document.cookie = "cinemaName"+"="+selectHallForm.firstChild.value;
+// })
 
-selectHallForm.firstChild.addEventListener('focusin',()=>{
-   document.cookie = "cinemaName"+"="+"null";
-})
+// selectHallForm.firstChild.addEventListener('focusin',()=>{
+//    document.cookie = "cinemaName"+"="+"null";
+// })
 
 // function renderMovieDates() {
 //    const xhttp = new XMLHttpRequest();
@@ -67,7 +67,7 @@ selectHallForm.firstChild.addEventListener('focusin',()=>{
 
 // }
 
-function fetch_select(val,movieName)
+function fetch_select(val,movieName,movieIndex)
 {
      $.ajax({
            type: 'post',
@@ -77,7 +77,7 @@ function fetch_select(val,movieName)
               movieName:movieName
            },
            success: function (response) {
-              document.getElementById("new_select").innerHTML=response; 
+              document.getElementById("new_select"+movieIndex).innerHTML=response; 
            },
            error: function (xhr, ajaxOptions, thrownError) {
            alert(xhr.status);

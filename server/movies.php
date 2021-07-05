@@ -8,8 +8,8 @@
      echoMovieListContainerBegin();
      $sql="SELECT * FROM movies;";
      $result=mysqli_query($connection,$sql);
+     $moviesIndex=1;
      while ($movies=mysqli_fetch_array($result)) {
-         
         $movieName=$movies['movieName'];
         // $sql2="SELECT * FROM movies WHERE movieName='$movieName';";
         // $result2=mysqli_query($connection,$sql2);
@@ -33,9 +33,10 @@
                       echo '</div>
                       <div  class="back ticketsOrderCard display-none">
                           <h5>הזמנת כרטיסים לסרט</h5>';
-                          echo "<h4 id=\"mName\">$movieName</h4>";
+                          echo "<h4 id=\"mName$moviesIndex\">$movieName</h4>";
+                         
                           echo '<form id="selectHallForm"  action="./movieTicketsOrder.php">';
-                                     echo '<select  name="cinemaName" onchange="fetch_select(this.value,document.getElementById(\'mName\').innerHTML);">';
+                                     echo '<select  name="cinemaName" onchange="fetch_select(this.value,document.getElementById(\'mName'.$moviesIndex.'\').innerHTML,'.$moviesIndex.');">';
                                           echo '<option selected disabled >בחר בית קולנוע</option>';
                                           echo '<option value="glilot">גלילות</option>';
                                           echo '<option value="kfr-saba">כפר סבא</option>';
@@ -43,10 +44,10 @@
                                           echo '<option value="jerusalem">ירושלים</option>';
                                           echo '<option value="beer-sheva">באר-שבע</option>';
                                      echo"</select></br>";
-                                     echo '
-                                         <select name="movieDateTime" id="new_select">
+                                     echo "
+                                         <select name=\"movieDateTime\" id=\"new_select$moviesIndex\">
                                          </select>
-                                      ';
+                                      ";
                                  
                                      echo'<input type="hidden" name="movieName" value="'.$movieName.'">
                                      <input  type="submit" value="בצע הזמנה" class="blue-button">
@@ -54,7 +55,10 @@
                       </div>
 
                   </div>';
+
         echoCloserDivTag();
+                          $moviesIndex++;
+
      }
      echoHtmlEnd();
 ?>
