@@ -17,6 +17,7 @@
               echo "Error ".mysqli_error($connection);
               echo "</br>";
           }
+          
          if(isset($_POST['cityName'])){
                $cinemaName=$_POST['cityName'];
                $movieName=$_POST['movieName'];
