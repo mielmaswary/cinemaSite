@@ -1,4 +1,3 @@
-// require('../dataBseConnection.php')
 
 const quantityChooseFields=document.getElementsByClassName('quantityChooseField');
 const availableThicketsArr=document.getElementsByClassName('hallTickets')
@@ -7,12 +6,6 @@ const ticketsOrderBtns=document.getElementsByClassName('ticketsOrderBtn');
 const ticketsOrderCards=document.getElementsByClassName('ticketsOrderCard');
 const cardsContent=document.getElementsByClassName('content');
 const selectHallForm=document.getElementById('selectHallForm');
-// const navbarMoviesBtn=document.getElementById("navbar-movies-btn");
-
-// navbarMoviesBtn.addEventListener('click',()=>{
-//    window.location.href="file:///C:/wamp64/www/firstphp/cinemaSite/server/movies.php";
-// })
-
 
 
 //tickets order form validaiton
@@ -51,21 +44,6 @@ for(let i=0;i<ticketsOrderCards.length;i++){
       })
 }
 
-// selectHallForm.firstChild.addEventListener('change',()=>{
-//    document.cookie = "cinemaName"+"="+selectHallForm.firstChild.value;
-// })
-
-// selectHallForm.firstChild.addEventListener('focusin',()=>{
-//    document.cookie = "cinemaName"+"="+"null";
-// })
-
-// function renderMovieDates() {
-//    const xhttp = new XMLHttpRequest();
-
-//    xhttp.open("GET", "http://localhost/firstphp/cinemaSite/server/movies.php", true);
-//    xhttp.send();
-
-// }
 
 function fetch_select(val,movieName,movieIndex)
 {

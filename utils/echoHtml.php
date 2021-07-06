@@ -24,7 +24,7 @@
                   <div class="icon instegram-logo social-icon"></div>
               </div>
               <ul class="navBar">
-                  <span><a href="../server/movies.php">סרטים</a></span>
+                  <span><a href="../server/index.php">סרטים</a></span>
                   <span>הופעות</span>
                   <span>מתחמים</span>
                   <span>VIP</span>

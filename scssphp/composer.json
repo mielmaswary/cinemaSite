@@ -28,7 +28,8 @@
     "require": {
         "php": ">=5.6.0",
         "ext-json": "*",
-        "ext-ctype": "*"
+        "ext-ctype": "*",
+        "silex/silex": "~1.1"
     },
     "suggest": {
         "ext-mbstring": "For best performance, mbstring should be installed as it is faster than ext-iconv",

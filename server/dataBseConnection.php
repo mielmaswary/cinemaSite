@@ -1,5 +1,5 @@
 <?php
-     $connection=mysqli_connect('localhost','cinema-admin','12345');
+     $connection=mysqli_connect('us-cdbr-east-04.cleardb.com','cinema-admin','12345');
      if(mysqli_connect_errno())
      {
          echo "error!".mysqli_connect_error();
