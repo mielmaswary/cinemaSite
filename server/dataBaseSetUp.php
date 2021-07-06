@@ -1,6 +1,6 @@
 <?php
 
-    $connection=mysqli_connect('us-cdbr-east-04.cleardb.com','root','');
+    $connection=mysqli_connect('localhost','root','');
     if(mysqli_connect_errno())
     {
         echo "error!".mysqli_connect_error();

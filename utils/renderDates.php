@@ -1,6 +1,6 @@
 <?php
         require_once('./echoHtml.php');
-        $connection=mysqli_connect('us-cdbr-east-04.cleardb.com','bf324ad36da1b1','041643af');
+        $connection=mysqli_connect('localhost','cinema-admin','12345');
           if(mysqli_connect_errno())
           {
               echo "error!".mysqli_connect_error();
@@ -17,7 +17,6 @@
               echo "Error ".mysqli_error($connection);
               echo "</br>";
           }
-          
          if(isset($_POST['cityName'])){
                $cinemaName=$_POST['cityName'];
                $movieName=$_POST['movieName'];
