@@ -1,6 +1,6 @@
 <?php
         require_once('./echoHtml.php');
-        $connection=mysqli_connect('us-cdbr-east-04.cleardb.com','cinema-admin','12345');
+        $connection=mysqli_connect('us-cdbr-east-04.cleardb.com','bf324ad36da1b1','041643af');
           if(mysqli_connect_errno())
           {
               echo "error!".mysqli_connect_error();
