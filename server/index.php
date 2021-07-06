@@ -1,7 +1,7 @@
 <?php
      require_once('./dataBseConnection.php');
      require_once('../utils/echoHtml.php');
-     require_once('../scssphp/scss.inc.php');
+     require_once('../scssphp-1.6.0/scss.inc.php');
 
      echoHtmlBegin();
      echoHeader();

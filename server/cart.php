@@ -1,7 +1,7 @@
 <?php
         require_once('./dataBseConnection.php');
         require_once('../utils/echoHtml.php');
-        require_once('../scssphp/scss.inc.php');
+        require_once('../scssphp-1.6.0/scss.inc.php');
 
         echoHtmlBegin();
         echoHeader();
@@ -66,7 +66,7 @@
            global $hallNumber,$movieName,$ticketsPurchasedQuantity,$totalAvailableTickets,$awnerName,$awnerLastName,$awnerEmail;
            updateHallAvailableTickets($hallNumber,$movieName,$ticketsPurchasedQuantity,$totalAvailableTickets);
            updatePurchasedTickets($hallNumber,$movieName,$awnerName,$awnerLastName,$awnerEmail,$ticketsPurchasedQuantity);
-           mail($awnerEmail,"check","Is it work???");
+        //    mail($awnerEmail,"check","Is it work???");
        }
        mysqli_close($connection);
 
