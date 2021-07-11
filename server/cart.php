@@ -32,7 +32,6 @@
              else
              {
                  echo "לא ניתן לבצע את הפעולה".mysqli_error($connection);
-                 echo "</br>";
              }
        }
 
@@ -47,7 +46,6 @@
              else
              {
                  echo "לא ניתן לבצע את הפעולה".mysqli_error($connection);
-                 echo "</br>";
              }
         }
 

@@ -1,5 +1,5 @@
 .purchaseMsg{
-    height: 270px;
+    height: calc(100vh - 170px);
     width: 250px;
     display: flex;
     flex-direction: column;
@@ -7,4 +7,5 @@
     justify-content: flex-start;
     position: relative;
     line-height: 20px;
+    margin: auto;
 }

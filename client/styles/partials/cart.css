@@ -1,5 +1,5 @@
 .purchaseMsg {
-  height: 270px;
+  height: calc(100vh - 170px);
   width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,5 +16,6 @@
           justify-content: flex-start;
   position: relative;
   line-height: 20px;
+  margin: auto;
 }
 /*# sourceMappingURL=cart.css.map */

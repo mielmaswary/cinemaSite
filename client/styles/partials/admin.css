@@ -25,6 +25,12 @@
   max-width: 350px;
 }
 
+@media (max-width: 481.99px) {
+  .admin-panel-form {
+    width: 80%;
+  }
+}
+
 .admin-edit-input {
   width: 100%;
   margin: 5px 0;

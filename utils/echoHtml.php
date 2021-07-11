@@ -15,8 +15,7 @@
      }
 
      function echoHeader(){
-          echo '
-          <div class="header">
+          echo '<div class="header">
               <div class="contact">
                   <span class="bright-blue">03-0000000</span>
                   <span class="bright-blue">sinema@sinema.com</span>

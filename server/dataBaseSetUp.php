@@ -4,7 +4,6 @@
     if(mysqli_connect_errno())
     {
         echo "error!".mysqli_connect_error();
-        echo "</br>";
 
     }
 
@@ -12,26 +11,22 @@
     if(mysqli_query($connection,$sql))
     {
         echo "Database created. </br>";
-        echo "</br>";
 
     }
     else
     {
         echo "Error ".mysqli_error($connection);
-        echo "</br>";
     }
 
     $sql='USE cinema';
      if(mysqli_query($connection,$sql))
      {
         //  echo "Using cinema. </br>";
-         echo "</br>";
  
      }
      else
      {
          echo "Error ".mysqli_error($connection);
-         echo "</br>";
      }
 
     $sql='CREATE TABLE halls(
@@ -43,12 +38,10 @@
     if(mysqli_query($connection,$sql))
     {
         echo "Table halls created.";
-        echo "</br>";
     }
     else
     {
         echo "Error ".mysqli_error($connection);
-        echo "</br>";
     }
     $cinemaNames=[
         'glilot',
@@ -63,14 +56,12 @@
             $sql="INSERT INTO halls(cinemaName,hallNumber) VALUES('$cinemaNames[$i]',$j)";
             if(mysqli_query($connection,$sql))
             {
-                echo "hall ".$cinemaNames[$i].'-'.$j." created. </br>";
-                echo "</br>";
+                echo "hall ".$cinemaNames[$i].'-'.$j." created. ";
         
             }
             else
             {
                 echo "Error ".mysqli_error($connection);
-                echo "</br>";
     
             }
         }
@@ -93,7 +84,6 @@
      else
      {
          echo "Error ".mysqli_error($connection);
-         echo "</br>";
  
      }
 
@@ -107,12 +97,10 @@
      if(mysqli_query($connection,$sql))
      {
          echo "Table movies created.";
-         echo "</br>";
      }
      else
      {
          echo "Error ".mysqli_error($connection);
-         echo "</br>";
   
      }
    
@@ -120,14 +108,12 @@
     $sql="GRANT ALL ON cinema.* TO 'cinema-admin'@'localhost' IDENTIFIED BY '12345'";
     if(mysqli_query($connection,$sql))
     {
-        echo "User created. </br>";
-        echo "</br>";
+        echo "User created.";
 
     }
     else
     {
         echo "Error ".mysqli_error($connection);
-        echo "</br>";
     }
     mysqli_close($connection);
 ?>

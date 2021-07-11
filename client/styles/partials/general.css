@@ -119,6 +119,14 @@ option {
   color: #CBE8FC;
 }
 
+@media (max-width: 1023.99px) {
+  .search-field {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
 .pink-button, .blue-button, .purchase-button, .pre-purchase-button {
   height: 50px;
   width: 180px;
@@ -146,6 +154,14 @@ option {
   background-color: #e62250;
 }
 
+@media (max-width: 1023.99px) {
+  .pink-button, .blue-button, .purchase-button, .pre-purchase-button {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
 .blue-button {
   background-color: #1D1D48;
   -webkit-transform: translate(-50%, -110%);
@@ -161,6 +177,7 @@ option {
   -webkit-transform: translate(-50%, 20%);
           transform: translate(-50%, 20%);
   width: 100%;
+  height: 50px;
 }
 
 .purchase-button:hover, .pre-purchase-button:hover {
@@ -191,7 +208,6 @@ option {
 
 .cinema-logo {
   background-image: url("https://www.cinema-city.co.il/img/logo.png");
-  width: 150px;
   min-width: 100px;
   height: 100px;
 }
@@ -205,8 +221,13 @@ option {
 
 @media (max-width: 481.99px) {
   .cinema-logo {
-    width: 90px;
-    height: 60px;
+    width: 75px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 

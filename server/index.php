@@ -20,8 +20,7 @@
         // $ticketsAvailable=($hall['ticketsAvailable']>0?$hall['ticketsAvailable']:'אין מקומות פנויים');
      
         echo '<div class="card icon">';
-           echo '
-                  <div class="content ">
+           echo '<div class="content ">
                        <div class="front movie-img" style="background-image: url('.$movieImgUrl.')">
                        </div>
                        <div class="back">';

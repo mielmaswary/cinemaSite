@@ -11,11 +11,16 @@
     padding: 10px;
     color: white;
   
+    
+  
 }
 .admin-panel-form{
     width: 60%;
     max-width: 350px;
+    @media (max-width:481.99px) {
+        width: 80%;
 
+    }
 }
 
 .admin-edit-input{
