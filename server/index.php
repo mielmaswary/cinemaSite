@@ -50,7 +50,7 @@
                                       ";
                                  
                                      echo'<input type="hidden" name="movieName" value="'.$movieName.'">
-                                     <input  type="submit" value="בצע הזמנה" class="blue-button">
+                                     <input  type="submit" value="בצע הזמנה" class="blue-button orderBtn" disabled>
                                </form>
                       </div>
 

@@ -11,7 +11,7 @@
               $result=mysqli_query($connection,$sql);
               while($movieImgUrls=mysqli_fetch_array($result)){
                 $movieImgUrl=$movieImgUrls['movieImgUrl'];
-                echo'<div class="movie-ticket-info movie-img" style="background-image: url('.$movieImgUrl.')">
+                echo'<div id="movie-ticket-info" class="movie-ticket-info movie-img" style="background-image: url('.$movieImgUrl.')">
                           <h3>'.$movieName.'</h3>
                           <form class="movie-ticket-info-form" action="./cart.php">';
                           $movieDateTime=$_GET['movieDateTime'];
@@ -32,12 +32,17 @@
                                 <input class="movie-ticket-info-form-input" type="text" placeholder="שם פרטי" name="awnerName"><br>
                                 <input class="movie-ticket-info-form-input"  type="text" placeholder="שם משפחה" name="awnerLastName"><br>
                                 <input class="movie-ticket-info-form-input" type="email" placeholder="כתובת דואל" name="awnerEmail"><br>
-                                <input class="movie-ticket-info-form-input pre-purchase-button" type="submit" ><br>
+                                <input class="pre-purchase-button" type="submit" disabled ><br>
                           </form>
                      </div>';
              }
              
          echoCloserDivTag();
+         
          echoHtmlEnd();
-
-?>
+         ?>
+         <script src="../client/js/moviesTicketsOrder.js"></script>
+         
+         <?php
+              mysqli_close($connection);
+         ?>

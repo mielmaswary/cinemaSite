@@ -6,6 +6,7 @@ const ticketsOrderBtns=document.getElementsByClassName('ticketsOrderBtn');
 const ticketsOrderCards=document.getElementsByClassName('ticketsOrderCard');
 const cardsContent=document.getElementsByClassName('content');
 const selectHallForm=document.getElementById('selectHallForm');
+const blueOrderBtn=document.getElementsByClassName('blue-button orderBtn');
 
 
 //tickets order form validaiton
@@ -20,14 +21,6 @@ for(let i=0;i<quantityChooseFields.length;i++){
    })
 }
 
-
-for(let i=0;i<ticketsOrderBtns.length;i++){
-   ticketsOrderBtns[i].addEventListener('click',()=>{
-      ticketsOrderCards[i].classList.remove('display-none');
-      closeOtherOrderCards(i)
-   })
-}
-
 const closeOtherOrderCards=(openedCardIndex)=>{
    for(let i=0;i<ticketsOrderBtns.length;i++){
       if(i!=openedCardIndex){
@@ -37,6 +30,36 @@ const closeOtherOrderCards=(openedCardIndex)=>{
       }      
    }
 }
+for(let i=0;i<ticketsOrderBtns.length;i++){
+   ticketsOrderBtns[i].addEventListener('click',()=>{
+      ticketsOrderCards[i].classList.remove('display-none');
+      closeOtherOrderCards(i)
+   })
+}
+
+//validation in card order form at home page
+for(let i=0;i<ticketsOrderCards.length;i++){
+   ticketsOrderCards[i].addEventListener('mouseover',()=>{
+        if(isValidFields(ticketsOrderCards[i]))
+           blueOrderBtn[i].disabled=false
+        else
+           blueOrderBtn[i].disabled=true
+   })
+}
+
+
+function isValidFields(form){
+   const formFields=form.getElementsByTagName('select')
+   for(let field of formFields){
+      if(field.value==undefined ||
+         field.value=="" ||
+         field.value=="בחר בית קולנוע")
+              return false        
+   }
+   return true
+    
+}
+
 
 for(let i=0;i<ticketsOrderCards.length;i++){
       ticketsOrderCards[i].addEventListener('mouseleave',()=>{
@@ -63,3 +86,4 @@ function fetch_select(val,movieName,movieIndex)
        }
      });
 }
+

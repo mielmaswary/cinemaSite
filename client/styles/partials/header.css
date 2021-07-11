@@ -72,10 +72,6 @@
   }
 }
 
-.header .navBar span:hover {
-  background-color: #9CA5AC;
-}
-
 .header .navBar span a {
   color: #BDE8FC;
   text-decoration: none;

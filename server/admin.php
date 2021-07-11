@@ -76,7 +76,7 @@
 
 ?>
 <h2>עדכון סרט חדש</h2>
-<form class="admin-panel-form" action="./admin.php">
+<form id="admin-panel-form" class="admin-panel-form" action="./admin.php">
     <input class="admin-edit-input" type="text" name="newMovieName" placeholder="שם הסרט"></br>
     <input class="admin-edit-input" type="text" name="newMovieDescription" placeholder="תיאור הסרט"></br>
     <input class="admin-edit-input" type="number" name="newMovieLength" placeholder="אורך בדקות"></br>
@@ -114,4 +114,6 @@
     echoCloserDivTag(); 
     echoHtmlEnd();
 ?>
+<script src="../client/js/admin.js"></script>
+
 

@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+
+
 *{
     padding: 0;
     margin: 0;
@@ -234,4 +237,28 @@ option{
 
 .display-none{
     display: none;
+}
+
+
+
+/* Where the magic begins: */
+
+.shiny {
+    background-image: -webkit-linear-gradient(310deg, #BDE8FC 25%, #7b1be9 37.5%, #4f09f1, #7b1be9 62.5%, #BDE8FC 75%);
+    background-image: linear-gradient(310deg, #BDE8FC 25%, #7b1be9 37.5%, #4f09f1, #7b1be9 62.5%, #BDE8FC 75%);
+    background-position: right center;
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: transparent;
+    transition: color 700ms linear;
+    font-size:28px;
+
+}
+
+.shiny:hover {
+  background-position: left center;
+  color: #ef9671;
+  transition: background-position 650ms ;
 }

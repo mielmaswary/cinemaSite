@@ -24,11 +24,11 @@
                   <div class="icon instegram-logo social-icon"></div>
               </div>
               <ul class="navBar">
-                  <span><a href="../server/index.php">סרטים</a></span>
-                  <span>הופעות</span>
-                  <span>מתחמים</span>
-                  <span>VIP</span>
-                  <span>הנחיות קורונה</span>
+                  <span class="shiny"><a href="../server/index.php">סרטים</a></span>
+                  <span class="shiny">הופעות</span>
+                  <span class="shiny">מתחמים</span>
+                  <span class="shiny">VIP</span>
+                  <span class="shiny">הנחיות קורונה</span>
                   <div class="cinema-logo icon"></div>
                   <input class="search-field" type="text" placeholder="חיפוש"></inupt>
                   <button class="pink-button">הזמן כרטיסים</button>
@@ -45,6 +45,7 @@
      }
 
      function echoHtmlEnd(){
+       
           echo '</body></html>';
      }
 
